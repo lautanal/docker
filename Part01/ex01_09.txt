@@ -1,0 +1,18 @@
+Command:
+docker run -d -it --name webservice --mount type=bind,source="$(pwd)"/text.log,target=/usr/src/app/text.log devopsdockeruh/simple-web-service:ubuntu
+
+Output:
+(base) Lasse-Mac-mini:text.log lasselautanala$ docker run -d -it --name webservice --mount type=bind,source="$(pwd)"/text.log,target=/usr/src/app/text.log devopsdockeruh/simple-web-service:ubuntu
+8375a17f0bd852dac4a404ba1d8070039860de1d463c3a5ddea444b9c94cb58a
+(base) Lasse-Mac-mini:text.log lasselautanala$ cat text.log
+2021-09-02 17:15:19 +0000 UTC
+2021-09-02 17:15:21 +0000 UTC
+2021-09-02 17:15:23 +0000 UTC
+2021-09-02 17:15:25 +0000 UTC
+2021-09-02 17:15:27 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-09-02 17:15:29 +0000 UTC
+2021-09-02 17:15:31 +0000 UTC
+2021-09-02 17:15:33 +0000 UTC
+2021-09-02 17:15:35 +0000 UTC
+2021-09-02 17:15:37 +0000 UTC

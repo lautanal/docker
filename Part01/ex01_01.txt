@@ -1,0 +1,16 @@
+docker ps -a
+
+Script started on Wed Sep  1 13:57:34 2021
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034hbash-3.2$ exitdocker images[K[K[K[K[K[Kps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                          PORTS     NAMES
+c11a7dadee25   nginx     "/docker-entrypoint.…"   2 minutes ago   Exited (0) About a minute ago             heuristic_robinson
+943a81523f24   nginx     "/docker-entrypoint.…"   2 minutes ago   Exited (0) About a minute ago             fervent_noyce
+e512a459832a   nginx     "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes                    80/tcp    nostalgic_gates
+bash-3.2$ exit
+exit
+
+Script done on Wed Sep  1 13:57:46 2021

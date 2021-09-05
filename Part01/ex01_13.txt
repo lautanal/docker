@@ -1,0 +1,18 @@
+Dockerfile:
+
+FROM golang:latest
+WORKDIR /myapp
+COPY go.mod ./
+COPY go.sum ./
+RUN go mod download
+COPY . /myapp
+RUN go build
+ENV REQUEST_ORIGIN=http://127.0.0.1:5000
+ENV PORT=8080
+EXPOSE 8080
+RUN go test ./...
+CMD ./server
+
+Commands:
+docker build . -t backend
+docker run -d -it -p 8080:8080 backend

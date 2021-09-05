@@ -1,0 +1,39 @@
+(base) Lasse-Mac-mini:Part01 lasselautanala$ docker pull devopsdockeruh/simple-web-service:alpine
+
+alpine: Pulling from devopsdockeruh/simple-web-service
+ba3557a56b15: Pull complete 
+1dace236434b: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine
+docker.io/devopsdockeruh/simple-web-service:alpine
+
+(base) Lasse-Mac-mini:Part01 lasselautanala$ docker images
+
+REPOSITORY                          TAG       IMAGE ID       CREATED        SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   5 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   5 months ago   15.7MB
+
+(base) Lasse-Mac-mini:Part01 lasselautanala$ docker run -d --rm -it --name alpine devopsdockeruh/simple-web-service:alpine
+f244916c960aa16810214468b2875977f959ce3e23821321aee709821d954a68
+
+(base) Lasse-Mac-mini:Part01 lasselautanala$ docker exec -it alpine sh
+
+/usr/src/app # tail -f ./text.log
+
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-09-02 11:18:22 +0000 UTC
+2021-09-02 11:18:24 +0000 UTC
+2021-09-02 11:18:26 +0000 UTC
+2021-09-02 11:18:28 +0000 UTC
+2021-09-02 11:18:30 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-09-02 11:18:32 +0000 UTC
+2021-09-02 11:18:34 +0000 UTC
+2021-09-02 11:18:36 +0000 UTC
+2021-09-02 11:18:38 +0000 UTC
+2021-09-02 11:18:40 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-09-02 11:18:42 +0000 UTC
+^C
+/usr/src/app # exit
